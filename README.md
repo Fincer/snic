@@ -2,13 +2,11 @@
 
 Toggle between client and router mode on network interface (Linux)
 
-Switch client network interface (NIC), such as eth0 or wlan0, from the default
-client mode to router mode. Basically, you can use the selected interface to act as a
-router for your other network devices.
+Switch network interface (NIC), such as `eth0` or `wlan0`, from default *client mode* to *router mode*. Basically, you can use the selected network interface to act as a router for your other network client devices such as mobile phones/tablets/etc... and switch it back to client mode quickly if needed.
 
-In client mode, the interface acts normally, as it does in your daily usage.
+**In the client mode**, the network interface acts normally as it does on your normal client Linux computer. It retrieves a IPv4 from a DHCP server on your local network and acts as client, etc.
 
-In router mode, a DHCP server kicks in and allocates IPv4 addresses for any connected devices which use a DHCP client. This is equivalent to normal stock/home router behavior.
+**In the router mode**, a DHCP server on your computer kicks in and allocates IPv4 addresses for any connected client devices (which use a DHCP client, of course). This is similar behavior to normal stock/home router.
 
 ----------------------
 
