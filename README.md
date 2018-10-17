@@ -112,7 +112,7 @@ The script syntax is as follows:
 
 - `snic <nic> <mode> <wireless (optional)>`
 
-<wireless> parameter is required only for wireless interfaces.
+`wireless` parameter is required only for wireless interfaces.
 
 For instance:
 
