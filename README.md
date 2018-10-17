@@ -26,27 +26,27 @@ Switch network interface (NIC), such as `eth0` or `wlan0`, from default *client 
 
 - Software:
 
-    - sudo
+    - `sudo`
 
         - root permissions required to configure NIC settings
 
-    - bash
+    - `bash`
 
         - the main script uses bash environment
 
-    - systemd
+    - `systemd`
 
         - the core functionality is implemented partly into systemd service files
 
-    - iproute2
+    - `iproute2`
 
         - 'ip' command which is required for NIC configuration
 
-    - dhcp (server)
+    - `dhcp` (server)
 
         - DHCP server is required to allocate IPv4 addresses for connected clients
 
-    - hostapd (for wireless router)
+    - `hostapd` (for wireless router)
 
         - hostapd is required to establish a Wi-Fi hotspot (wireless interfaces)
 
@@ -56,13 +56,17 @@ Switch network interface (NIC), such as `eth0` or `wlan0`, from default *client 
 
 ## Files
 
-- snic.sh = main script. See section "Snic main script" below
+- `snic.sh` = main script. See section "Snic main script" below
 
-- snic/ = Snic configuration files. See section "Snic configuration files" below
+- `snic/` = Snic configuration files. See section "Snic configuration files" below
 
-- systemd/ = Snic systemd service files. See section "systemd service files" below
+- `systemd/` = Snic systemd service files. See section "systemd service files" below
 
-- conf-templates/ = Snic templates for iptables & hostapd. See section "Templates folder" below
+- `conf-templates/` = Snic templates for iptables & hostapd. See section "Templates folder" below
+
+## Arch Linux PKGBUILD
+
+- [Link here](https://github.com/Fincer/linux-patches-and-scripts/blob/master/snic/PKGBUILD)
 
 ----------------------
 
