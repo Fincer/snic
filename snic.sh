@@ -59,7 +59,7 @@ fi
 
 ########################
 
-if [[ ${2} != "router" ]] || [[ ${2} != "client" ]]; then
+if [[ ${2} != "router" ]] && [[ ${2} != "client" ]]; then
     echo "Invalid mode. Use either 'router' or 'client'. Aborting."
     exit 1
 fi
