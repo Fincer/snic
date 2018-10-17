@@ -8,7 +8,7 @@ router for your other network devices.
 
 In client mode, the interface acts normally, as it does in your daily usage.
 
-In router mode, a DHCP server kicks in and allocated IPv4 addresses for any connected devices which use a DHCP client. This is equivalent to normal home router behavior.
+In router mode, a DHCP server kicks in and allocates IPv4 addresses for any connected devices which use a DHCP client. This is equivalent to normal stock/home router behavior.
 
 ----------------------
 
