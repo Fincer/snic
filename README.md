@@ -8,6 +8,16 @@ Switch network interface (NIC), such as `eth0` or `wlan0`, from default *client 
 
 **In the router mode**, a DHCP server on your computer kicks in and allocates IPv4 addresses for any connected client devices (which use a DHCP client, of course). This is similar behavior to normal stock/home router.
 
+- You can perform occasional MITM attack scenarios without needing a fixed network setup for that
+    
+- You can occasionally analyze all network traffic going through your network interface, and find out suspicious network traffic originating from a client device
+    
+- You can quickly extend network area if needed
+
+- You can periodically use the same network interface for playing with Raspberry Pi/Arduino/... and switch quickly back to regular internet connection if needed
+
+- etc. ...
+
 ----------------------
 
 ## Requirements
