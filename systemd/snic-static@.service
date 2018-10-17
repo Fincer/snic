@@ -1,0 +1,19 @@
+[Unit]
+Description=Network interface with static IPv4 (%i)
+After=network.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+
+EnvironmentFile=/etc/snic/snic-%i.conf
+
+ExecStart=/usr/bin/ip link set %i up
+ExecStart=/usr/bin/ip addr flush dev %i
+ExecStart=/usr/bin/ip addr add ${snic_sta_addr}/${snic_sta_mask} dev %i
+
+ExecStop=/usr/bin/ip addr flush dev %i
+ExecStop=/usr/bin/ip link set %i down
+
+[Install]
+WantedBy=multi-user.target

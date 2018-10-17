@@ -1,0 +1,23 @@
+*filter
+:INPUT ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+
+-A FORWARD -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+-A FORWARD -o eth0 -j ACCEPT
+-A FORWARD -o usb0 -j ACCEPT
+-A FORWARD -o wlan0 -j ACCEPT
+
+COMMIT
+
+*nat
+#:PREROUTING ACCEPT [0:0]
+#:POSTROUTING ACCEPT [0:0]
+
+## Use this interface to route traffic from other interfaces to internet
+## E.g. traffic from eth0 -> wlan0 -> internet
+-A POSTROUTING -o wlan0 -j MASQUERADE
+-A POSTROUTING -o eth0 -j MASQUERADE
+-A POSTROUTING -o usb0 -j MASQUERADE
+
+COMMIT
