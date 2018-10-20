@@ -112,6 +112,14 @@ This repository includes templates for `iptables.rules` and `hostapd` configurat
 
 This is a sample `iptables` ruleset file. Change contents as you want. This file includes basic configuration to route traffic from network interface to another one.
 
+**NOTE:** In order to apply traffic between a local client and internet, you must have `iptables` running. In order to check that, run `systemctl is-active iptables`. If the answer is `inactive`, your iptables firewall service is not running.
+
+Before issuing any of the following commands (~before starting iptables), make sure you have your iptables configuration file `/etc/iptables/iptables.rules` set up correctly on your system.
+
+Once the configuration file is OK, you should check whether iptables is started during computer boot process or not: run `systemctl is-enabled iptables`
+
+And finally, to ensure iptables is automatically started during computer boot and, well, started right now: run `sudo systemctl restart iptables && sudo systemctl enable iptables`.
+
 #### hostapd.conf
 
 This is a sample `hostapd` configuration file. Change contents as you want. Usually this file is located at `etc/hostapd/hostapd.conf` on Linux system. On some Linux systems, different locations are used.
