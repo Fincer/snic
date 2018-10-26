@@ -40,7 +40,7 @@ Switch network interface (NIC), such as `eth0` or `wlan0`, from default *client 
 
     - `iproute2`
 
-        - 'ip' command which is required for NIC configuration
+        - `ip` command which is required for NIC configuration
 
     - `dhcp` (server)
 
@@ -160,7 +160,7 @@ For instance:
 
     - Tell snic script that this is a wireless interface (starts hostapd service)
 
-    - Set a static IPv4 address for eth0, defined in `/etc/snic/snic-wlan0.conf`
+    - Set a static IPv4 address for wlan0, defined in `/etc/snic/snic-wlan0.conf`
 
     - Start DHCP server on the subnet where wlan0 belongs to.
 
