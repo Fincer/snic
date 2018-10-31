@@ -217,3 +217,9 @@ And double check contents of all relevant snic configuration files described abo
 - **DHCP settings are in danger** Be aware that this script may alter your current DHCP server setup. However, your current *DHCP server setup configuration files are **NOT** overwritten (or even touched)* but snic configuration may cause conflicts in your setup, anyway.
 
 Just be careful when adapting snic settings, thank you. Debug your setup if needed.
+
+----------------------
+
+## License
+
+This repository is licensed under GPLv3.
